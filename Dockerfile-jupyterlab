@@ -1,0 +1,9 @@
+FROM python:3.11
+
+WORKDIR /jupyterlab
+
+RUN pip3 install jupyterlab
+
+EXPOSE 8888
+
+ENTRYPOINT [ "jupyter", "lab", "--ip=0.0.0.0", "--allow-root" ]
